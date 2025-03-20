@@ -8,22 +8,22 @@ export const clientArray = [
   },
   {
     src: "/pfp-2.jpg",
-    color: "bg-[#EAEAF4]",
+    color: "bg-[#EAEAF4]/30",
     deviation: "mr-24 sm:mr-70",
   },
   {
     src: "/pfp-3.jpg",
-    color: "bg-gray-100",
+    color: "bg-gray-100 bg-opacity-25",
     deviation: "ml-10 sm:ml-30",
   },
   {
     src: "/pfp-4.jpg",
-    color: "bg-[#EAEAF4]",
+    color: "bg-[#EAEAF4]/30 ",
     deviation: "mr-24 sm:mr-70",
   },
   {
     src: "/pfp-2.jpg",
-    color: "bg-gray-100",
+    color: "bg-gray-100 bg-opacity-25",
     deviation: "m-0",
   },
 ];
