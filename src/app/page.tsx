@@ -34,7 +34,7 @@ const page = () => {
             <motion.div
               className={`w-full flex justify-center ${client.deviation}`}
               key={index}
-              style={{ y: getEffectAmount(scrollYProgress, isMobile) }}
+              style={{ y: getEffectAmount(scrollYProgress, isMobile, index) }}
             >
               <Card src={client.src} color={client.color}></Card>
             </motion.div>
