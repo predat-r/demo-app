@@ -4,7 +4,7 @@ import { clientArray, getEffectAmount } from "@/lib";
 import { motion, useScroll } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
-const page = () => {
+const MainPage = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     container: containerRef,
@@ -28,7 +28,7 @@ const page = () => {
       ref={containerRef}
       className="w-screen relative h-screen bg-white flex flex-col overflow-y-scroll"
     >
-      <div className=" absolute z-10 top-1/6 w-full  flex flex-col justify-center items-center gap-y-5 h-[280vh] ">
+      <div className=" absolute z-10 top-1/6 w-full  flex flex-col justify-center items-center gap-y-5 h-[300vh] ">
         {clientArray.map((client, index) => {
           return (
             <motion.div
@@ -51,4 +51,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default MainPage;

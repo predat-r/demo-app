@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const Card = ({ src, color }: { src: string; color: String }) => {
+const Card = ({ src, color }: { src: string; color: string }) => {
   return (
     <div
       className={`w-2/3 sm:w-6/16 md:w-4/12 h-64 box-border rounded-4xl flex z-10 flex-col shrink-0 overflow-hidden justify-evenly items-center px-7 pt-2 pb-2 text-black  shadow-[var(--shadow-custom)]  ${color} backdrop-blur-xs `}
@@ -22,9 +22,9 @@ const Card = ({ src, color }: { src: string; color: String }) => {
         </div>
       </div>
       <p className="text-[14px] md:text-[18px] text-[#191A3C] ">
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cum
+        &quot;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cum
         dolores sunt, culpa delectus voluptatibus quas ea nulla neque atque
-        architecto quia debitis commodi labore!""
+        architecto quia debitis commodi labore!&quot;
       </p>
     </div>
   );
