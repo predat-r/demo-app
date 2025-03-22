@@ -2,13 +2,26 @@
 import Card from "@/components/Card";
 import { clientArray, getEffectAmount } from "@/lib";
 import { motion, useScroll } from "framer-motion";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const page = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     container: containerRef,
   });
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkIsMobile();
+
+    window.addEventListener("resize", checkIsMobile);
+
+    return () => window.removeEventListener("resize", checkIsMobile);
+  }, []);
 
   return (
     <div
@@ -21,7 +34,7 @@ const page = () => {
             <motion.div
               className={`w-full flex justify-center ${client.deviation}`}
               key={index}
-              style={{ y: getEffectAmount(scrollYProgress) }}
+              style={{ y: getEffectAmount(scrollYProgress, isMobile) }}
             >
               <Card src={client.src} color={client.color}></Card>
             </motion.div>
@@ -30,7 +43,9 @@ const page = () => {
       </div>
 
       <div className="fixed pl-10 md:pl-24 top-80 z-0 w-full">
-        <h1 className="text-4xl sm:text-6xl lg:text-8xl font-medium  text-[#E0321F]">CLIENT SPEAK</h1>
+        <h1 className="text-4xl sm:text-6xl lg:text-8xl font-medium  text-[#E0321F]">
+          CLIENT SPEAK
+        </h1>
       </div>
     </div>
   );

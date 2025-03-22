@@ -4,7 +4,7 @@ import Image from "next/image";
 const Card = ({ src, color }: { src: string; color: String }) => {
   return (
     <div
-      className={`w-2/3 sm:w-6/16 md::w-4/12 h-64 box-border rounded-4xl flex z-10 flex-col shrink-0 overflow-hidden justify-evenly items-center px-7 pt-2 pb-2 text-black shadow-lg  ${color} backdrop-blur-xs`}
+      className={`w-2/3 sm:w-6/16 md:w-4/12 h-64 box-border rounded-4xl flex z-10 flex-col shrink-0 overflow-hidden justify-evenly items-center px-7 pt-2 pb-2 text-black  shadow-[var(--shadow-custom)]  ${color} backdrop-blur-xs `}
     >
       <div className="flex flex-row  h-1/3 w-full items-center justify-left gap-x-4">
         <div className="h-16 w-16 overflow-hidden rounded-full">
